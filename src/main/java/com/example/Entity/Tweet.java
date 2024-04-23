@@ -2,8 +2,6 @@ package com.example.Entity;
 
 import java.sql.Date;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,5 +17,12 @@ public class Tweet {
     private Date createdAt;
     
    
-    private User user; 
+    private User user;
+
+    public Tweet(String content, String author, Date createdAt, Long id) {
+        this.content = content;
+        this.author = author;
+        this.createdAt = createdAt;
+        this.id = id;
+    }
 }

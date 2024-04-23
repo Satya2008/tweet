@@ -25,8 +25,8 @@ public class TweetController {
 
     @PostMapping("/{userId}")
     public ResponseEntity<String> addTweet(@PathVariable Long userId, @RequestBody Tweet tweet) {
-    	System.out.println(userId);
-    	System.out.println(tweet);
+//    	System.out.println(userId);
+//    	System.out.println(tweet);
         String result = tweetService.addTweet(userId, tweet);
         
         return new ResponseEntity<>(result, HttpStatus.CREATED);
